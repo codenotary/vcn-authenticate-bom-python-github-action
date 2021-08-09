@@ -1,17 +1,17 @@
-name: notarize-project-bom
+name: authenticate-project-bom
 
 on:
   push:
     branches: [main]
 
 jobs:
-  notarize-python-project-with-bom:
+  authenticate-python-project-with-bom:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Notarize Python project with BoM
+      - name: Authenticate Python project with BoM
         #--> Run the GitHub action
         uses: codenotary/vcn-authenticate-bom-python-github-action@v1.0.0
         # uses: codenotary/vcn-authenticate-bom-python-github-action@main
